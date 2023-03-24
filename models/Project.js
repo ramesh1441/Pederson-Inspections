@@ -23,7 +23,7 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    phone_number: {
       type: DataTypes.STRING,
       allowNull: false,
     },
