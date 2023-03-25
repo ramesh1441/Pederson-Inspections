@@ -3,7 +3,7 @@
 
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ffffff;
-  text-align: right;
+  text-align: center;
   font-size: 1.95rem;
 }
 
@@ -38,7 +38,7 @@ header, .project:not(:last-child) {
   --color-light: rgba(132, 139, 200, 0.18);
   --color-primary-variant: #11188;
   --color-dark-variant: #1464ccee;
-  --color-background: #f6f6f9;
+  --color-background: #f9f6f6f5;
 
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
@@ -76,13 +76,26 @@ body{
   overflow-x: hidden;
 }
 
+.container{
+  display: grid;
+  width: 95%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+aside{
+  height: 100vh;
+}
+
 a{
   color: var(--color-dark-variant)
 }
 
 img{
-  display: block;
-  width: auto;
+  display: flexbox;
+  width: fit-content;
+  height: fit-content;
   overflow: auto;
 }
 
@@ -118,3 +131,10 @@ small{
   overflow: hidden;
 }
 
+p{
+  color: var(--color-dark-variant);
+}
+
+.primary{
+  color: var(--color-primary-variant);
+}
