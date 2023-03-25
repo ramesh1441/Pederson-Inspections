@@ -37,7 +37,7 @@ header, .project:not(:last-child) {
   --color-info-dark: #1b0808;
   --color-light: rgba(132, 139, 200, 0.18);
   --color-primary-variant: #11188;
-  --color-dark-variant: #677483;
+  --color-dark-variant: #1464ccee;
   --color-background: #f6f6f9;
 
   --card-border-radius: 2rem;
@@ -62,7 +62,7 @@ box-sizing: border-box;
 }
 
 html{
-  font-size: 14px;
+  font-size: 12px;
 
 }
 
@@ -75,3 +75,46 @@ body{
   user-select: none;
   overflow-x: hidden;
 }
+
+a{
+  color: var(--color-dark-variant)
+}
+
+img{
+  display: block;
+  width: auto;
+  overflow: auto;
+}
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+  }
+
+h2{
+  font-size: 1.4rem;
+}
+
+h3{
+  font-size: 0.85rem;
+}
+
+h4{
+  font-size: 1.2rem;
+}
+
+h5{
+  font-size: 0.95rem;
+}
+
+small{
+  font-size: 0.95rem;
+}
+
+.profile-photo{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
