@@ -27,6 +27,34 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/admin', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const projectData = await Project.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+    console.log('projectData is', projectData);
+
+    // Serialize data so the template can read it
+    const projects = projectData.map((project) => project.get({ plain: true }));
+    console.log('projects serialized is', projects)
+
+    // Pass serialized data and session flag into template
+    res.render('adminHomepage', { 
+      projects, 
+      isAdmin: req.session.isAdmin,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/project/:id', async (req, res) => {
   try {
     const projectData = await Project.findByPk(req.params.id, {
