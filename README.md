@@ -2,7 +2,7 @@
 
 ## User Story
 
-This project was created for an electrical inspector that wants a user interface where people can create an account and request an inspection for a certain date. If they need to change anything at any point, he wants them to be able to edit or delte their request instead of calling or emailing him every time. He would also like an administrator account where he can view all the data and sort by date in order to create a schedule. He also wants a map of the territory he services and a message board where he can post banner notifications to people who use his site (i.e. scheduled vacations). He currently has a website, but gets many complaints about the functionality and would like something more user friendly.
+This project was created for an electrical inspector that wants a user interface where people can create an account and request an inspection for a certain date. If they need to change anything at any point, he wants them to be able to edit or delete their request instead of calling or emailing him every time. He would also like an administrator account where he can view all the data and sort by date in order to create a schedule. He also wants a map of the territory he services and a message board where he can post banner notifications to people who use his site (i.e. scheduled vacations). He currently has a website, but gets many complaints about the functionality and would like something more user friendly.
 
 ## How it Works
 
