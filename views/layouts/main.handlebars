@@ -22,28 +22,26 @@
       </picture>
     </figure>  
     <div class="text-box text-center justify-self-center self-center">
-      <h1>Gary Pederson</h1>
+      <p id="title">Pederson Inspections</p>
       <p>State Electical Inspector for the Minnesota Department of Labor and Industry.<br/> Serving Minneapolis (north of 42nd street) and Inver Grove Heights.</p>
     </div>
   </div>
   </header>
 
   <nav class="nav-bar">
-    <ul>
-      <li><a href="#home">Home</a></li>
+    <ul id="nav-bar-list">
+      <li "nav"><a href="#home">Home</a></li>
         <div class="dropdown">
-          <li><button class="dropbtn">Helpful Links
-            <i class="fa fa-caret-down"></i>  
-          </button></li>
+          <li><button class="dropbtn">Helpful Links</button></li>
           <div class="dropdown-content">
-            <a href="https://www.dli.mn.gov/sites/default/files/pdf/eli_inspection_checklist2.pdf">Residental Checklist</a>
-            <a href="https://www.dli.mn.gov/business/get-licenses-and-permits/permits">Permit Forms</a>
-            <a href="https://www.dli.mn.gov/">MNDOLI</a>
+            <a href="https://www.dli.mn.gov/sites/default/files/pdf/eli_inspection_checklist2.pdf" target="_blank">Residental Checklist</a>
+            <a href="https://www.dli.mn.gov/business/get-licenses-and-permits/permits" target="_blank">Permit Forms</a>
+            <a href="https://www.dli.mn.gov/" target="_blank">MNDOLI</a>
           </div>    
         </div>
 <!-- Conditionally render login or logout links -->
   {{#if logged_in}}
-    <li class="right-button"><a href="/profile">Profile</a></li>
+    <li><a href="/profile">Profile</a></li>
     <button class="no-button" id="logout">Logout</button></li>
   {{else}}
     <li class="right-button"><a href="/login">Login</a></li>
