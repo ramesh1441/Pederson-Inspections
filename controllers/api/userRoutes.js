@@ -16,6 +16,41 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.post('/admin', async(req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: "ramesh@email.com"} });
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    const validPassword = true; //await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      req.session.isAdmin = true;
+      
+      res.json({ user: userData, message: 'You are now logged in as admin!!', isAdmin: req.session.isAdmin });
+    });
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
+
 router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });

@@ -1,4 +1,5 @@
 <!-- Loop over each object in the projects array -->
+{{#if isAdmin}}
 {{#each projects as |project| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
@@ -13,5 +14,5 @@
   </div>
 </div>
 {{/each}}
-
+{{/if}}
 <h2>homepage.handlebars</h2>
