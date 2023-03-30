@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pederson Electric</title>
+  <title>Pederson Inspections</title>
+   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
@@ -12,61 +13,52 @@
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-         <img src="https://user-images.githubusercontent.com/119467134/227715459-92e2659f-12e7-4869-9eda-d867a9291191.jpg" alt="company_logo">
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
+  <header class="display-flex justify-space-between align-center p-2">
+  <div class="wrapper">
+    <figure>
+      <picture>
+        <img src="https://pedersoninspections.com/images/Gary2021.jpg" alt="Gary Pederson">
+          <figcaption>Gary Pederson</figcaption>
+      </picture>
+    </figure>  
+    <div class="text-box text-center">
+      <h1>Gary Pederson</h1>
+      <p>State Electical Inspector for the Minnesota Department of Labor and Industry.<br/> Serving Minneapolis (north of 42nd street) and Inver Grove Heights.</p>
+    </div>
+  </div>
+  </header>
+
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+        <div class="dropdown">
+          <li><button class="dropbtn">Helpful Links
+            <i class="fa fa-caret-down"></i>  
+          </button></li>
+          <div class="dropdown-content">
+            <a href="https://www.dli.mn.gov/sites/default/files/pdf/eli_inspection_checklist2.pdf">Residental Checklist</a>
+            <a href="https://www.dli.mn.gov/business/get-licenses-and-permits/permits">Permit Forms</a>
+            <a href="https://www.dli.mn.gov/">MNDOLI</a>
+          </div>    
+        </div>
+<!-- Conditionally render login or logout links -->
+  {{#if logged_in}}
+    <li style="float:right"><a href="/profile">Profile</a></li>
+    <button class="no-button" id="logout">Logout</button></li>
+  {{else}}
+    <li style="float:right"><a href="/login">Login</a></li>
+  {{/if}}
+    </ul>
+  </nav>
+    
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
 
-    <div>
-      <h1>
-        <img src="https://pedersoninspections.com/images/Gary2021.jpg" alt="Gary Image">
-        <h6>Gary Pederson</h6>
-        <h4>p. 952-431-3565</h4>
-      <h2>
-        <h4>Office Hours</h4>
-        <h6>6:00 am to 7:45 am</h6>
-        <h6>Monday - Friday</h6>
-      </h2>  
-        
-
-      </h1>
-
-    </div>
-    <div class="cont">
-      <aside>
-        <div class="sidebar">
-              <a href="https://www.dli.mn.gov/sites/default/files/pdf/eli_inspection_checklist2.pdf">
-              <span class="material-icons-sharp"> inventory</span>
-              <h4>Residental Checklist</h4>
-          <a href="https://www.dli.mn.gov/business/get-licenses-and-permits/permits">
-              <span class="material-icons-sharp"> inventory</span>
-              <h4>MN Electrical Licensing and Inspections</h4>
-          <a href="https://www.dli.mn.gov/" alt="MN Dept of Labor and Industry">
-              <span class="material-icons-sharp"> receipt long</span>
-              <h4>MN Dept of Labor and Industry</h4>
-        </div>
-          
-        </div>
-      </aside>
-    </div>
-
+  <div>
     <footer>
-      
+      <!--add footer-->
     </footer>
   </div>
 
