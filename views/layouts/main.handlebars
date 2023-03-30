@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pederson Inspections</title>
-   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
@@ -14,14 +14,14 @@
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
-  <div class="wrapper">
+  <div class="wrapper display-flex flex-row justify-center">
     <figure>
-      <picture>
+      <picture class="display-flex flex-col">
         <img src="https://pedersoninspections.com/images/Gary2021.jpg" alt="Gary Pederson">
           <figcaption>Gary Pederson</figcaption>
       </picture>
     </figure>  
-    <div class="text-box text-center">
+    <div class="text-box text-center justify-self-center self-center">
       <h1>Gary Pederson</h1>
       <p>State Electical Inspector for the Minnesota Department of Labor and Industry.<br/> Serving Minneapolis (north of 42nd street) and Inver Grove Heights.</p>
     </div>
@@ -43,10 +43,10 @@
         </div>
 <!-- Conditionally render login or logout links -->
   {{#if logged_in}}
-    <li style="float:right"><a href="/profile">Profile</a></li>
+    <li class="right-button"><a href="/profile">Profile</a></li>
     <button class="no-button" id="logout">Logout</button></li>
   {{else}}
-    <li style="float:right"><a href="/login">Login</a></li>
+    <li class="right-button"><a href="/login">Login</a></li>
   {{/if}}
     </ul>
   </nav>
