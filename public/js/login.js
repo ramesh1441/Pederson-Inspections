@@ -44,6 +44,30 @@ const signupFormHandler = async (event) => {
   }
 };
 
+const adminFormHandler = async (event) => {
+  event.preventDefault();
+  console.log('adminFormHandler ran');
+
+  const email = document.querySelector('#email-admin').value.trim();
+  const password = document.querySelector('#password-admin').value.trim();
+
+  if (email && password) {
+    const response = await fetch('/api/users/admin', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    console.log('response is', response);
+    
+    if (response.ok) {
+      document.location.replace('/admin');
+    } else {
+      alert(response.statusText);
+    }
+  }
+}
+
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
@@ -51,3 +75,7 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+document
+  .querySelector('.admin-form')
+  .addEventListener('submit', adminFormHandler);
