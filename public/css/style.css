@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: yellow;
+  background: rgb(193, 189, 189);
 }
 
 img {
@@ -20,6 +20,11 @@ img {
   border: 3px solid black;
   border-radius: 10px;
   margin-right: 15px;
+}
+
+p#title {
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .wrapper {
@@ -44,20 +49,14 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
-  background-color: orchid;
+  background-color: rgb(2, 2, 112);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
 li {
-  /* float: left; */
   border-right: 1px solid white;
-}
-
-li:last-child {
-  border-right: none;
 }
 
 li a {
@@ -66,10 +65,11 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-li a:hover:not(.active) {
-  background-color: royalblue;
+li a:hover {
+  background-color: orchid;
 }
 
 .dropbtn {
@@ -83,6 +83,7 @@ li a:hover:not(.active) {
 .dropdown {
   position: relative;
   display: inline-block;
+  font-weight: bold;
 }
 
 .dropdown-content {
@@ -92,7 +93,7 @@ li a:hover:not(.active) {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  margin-top:55px;
+  margin: top 5px;
 }
 
 .dropdown-content a {
@@ -100,20 +101,15 @@ li a:hover:not(.active) {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  background-color: rgb(210, 208, 208);
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: orchid;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-
-.right-button {
-  justify-self: flex-end;
 }
 
 main {
@@ -124,21 +120,34 @@ main {
 .row {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   flex-wrap: wrap;
 }
 
 .item {
   background: white;
-  height: 200px;
+  min-height: 200px;
   /* width: 100%; */
-  width: 200px;
+  width: 30%;
   border: solid 1px;
   text-align: center;
-  font-size: 2em;
+  font-size: 15px;
   color: darkcyan;
   font-weight: bold;
   margin: 5px;
+  }
+
+  .Bigitem {
+    flex: 2 1 auto;
+    background: white;
+    min-height: 200px;
+    /* width: 100%; */
+    width: 30%;
+    border: solid 1px;
+    text-align: center;
+    font-size: 15px;
+    color: darkcyan;
+    font-weight: bold;
+    margin: 5px;
   }
 
   section {
@@ -154,3 +163,9 @@ main {
     min-height: 200vh;
     justify-content: left;
   }
+
+  span {
+    font-style: italic;
+    font-size: 16px;
+  }
+
