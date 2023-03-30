@@ -1,65 +1,23 @@
 # Pederson-Inspections
 
-## Description
+## User Story
 
-Provide a short description explaining the what, why, and how of your project. 
+This project was created for an electrical inspector that wants a user interface where people can create an account and request an inspection for a certain date. If they need to change anything at any point, he wants them to be able to edit or delte their request instead of calling or emailing him every time. He would also like an administrator account where he can view all the data and sort by date in order to create a schedule. He also wants a map of the territory he services and a message board where he can post banner notifications to people who use his site (i.e. scheduled vacations). He currently has a website, but gets many complaints about the functionality and would like something more user friendly.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+## How it Works
 
-## Table of Contents (Optional)
+By usinng Sequelize, Handlebars, and Mysql, we were able to create a user login and an admin login on the main page where whatever the user enters is vidible to the admin.
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+## Our Team
 
-## Installation
+Chris Lee (github.com/chrislee1659)
+Chelsea Pederson (github.com/chelsea-marie) 
+Ramesh Ramaswamy (github.com/ramesh1441)
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+## Our project details
 
-## Usage
+Project Proposal: https://docs.google.com/document/d/1ihrViMEb1OGXSl-BrnstLOdHXrxTNr5VksKJBmkYPt8/edit
 
-Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
